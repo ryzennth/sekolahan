@@ -38,17 +38,14 @@ document.addEventListener("DOMContentLoaded", function() {
     
     let currentIndex = 0;
     const slideCount = slides.length;
-    let dots = []; // Array untuk menyimpan elemen dot
+    let dots = [];
 
-    // --- Fungsi Utama untuk Pindah Slide ---
     const moveToSlide = (index) => {
-      // Pindahkan track menggunakan transform CSS
       track.style.transform = `translateX(-${index * 100}%)`;
       currentIndex = index;
       updateDots();
     };
 
-    // --- Fungsi untuk Update Dot Aktif ---
     const updateDots = () => {
       dots.forEach((dot, index) => {
         if (index === currentIndex) {
@@ -61,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     };
 
-    // --- Generate Dots secara dinamis ---
     slides.forEach((_, index) => {
       const dot = document.createElement('button');
       dot.classList.add('carousel-dot', 'w-3', 'h-3', 'rounded-full', 'transition-colors');
@@ -69,14 +65,13 @@ document.addEventListener("DOMContentLoaded", function() {
         moveToSlide(index);
       });
       dotsContainer.appendChild(dot);
-      dots.push(dot); // Simpan dot ke array
+      dots.push(dot);
     });
 
-    // --- Event Listener untuk Tombol Next/Prev ---
     nextButton.addEventListener('click', () => {
       let nextIndex = currentIndex + 1;
       if (nextIndex >= slideCount) {
-        nextIndex = 0; // Loop kembali ke awal
+        nextIndex = 0; 
       }
       moveToSlide(nextIndex);
     });
@@ -84,19 +79,16 @@ document.addEventListener("DOMContentLoaded", function() {
     prevButton.addEventListener('click', () => {
       let prevIndex = currentIndex - 1;
       if (prevIndex < 0) {
-        prevIndex = slideCount - 1; // Loop ke slide terakhir
+        prevIndex = slideCount - 1; 
       }
       moveToSlide(prevIndex);
     });
     
-    // --- Inisialisasi: Pindah ke slide pertama dan update dots ---
     moveToSlide(0);
 
-    // --- (OPSIONAL) Autoplay ---
-    // Hapus komentar (//) di 3 baris di bawah ini untuk autoplay
     setInterval(() => {
-      nextButton.click(); // Mensimulasikan klik tombol 'next'
-    }, 5000); // Pindah slide setiap 5 detik (5000ms)
+      nextButton.click(); 
+    }, 5000);
 
-  } // Akhir dari 'if (carousel)'
+  }
 });

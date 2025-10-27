@@ -1,8 +1,11 @@
-@type {import('tailwindcss').Config} 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  
+  // INI BAGIAN TERPENTING
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    './*.html'
   ],
+
   theme: {
     extend: {},
   },

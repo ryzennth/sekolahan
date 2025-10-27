@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/css/style.css" rel="stylesheet">
+    <title>Overview - Sekolahan Bocah Kampung</title>
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+    
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+</head>
+<body class="bg-zinc-800">
+
+    <div id="navbar-placeholder" class="animate-fade-in"></div>
+
+    <main>
+        <section class="py-20 min-h-screen animate-fade-up" id="overview">
+            <div class="text-center">
+                <span class="text-4xl font-bold text-white">OVERVIEW</span>
+                    <div id="banner-carousel" class="w-full max-w-5xl mx-auto relative overflow-hidden rounded-sm pt-20 animate-fade-in">
+    
+                    <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+                        
+                        <div class="carousel-slide w-full flex-shrink-0 relative">
+                            <img src="assets/img/banner/1.png" alt="Banner 1" class="w-full h-auto object-cover">
+                        </div>
+
+                        <div class="carousel-slide w-full flex-shrink-0 relative">
+                            <img src="assets/img/banner/2.png" alt="Banner 2" class="w-full h-auto object-cover">
+                        </div>
+
+                        <div class="carousel-slide w-full flex-shrink-0 relative">
+                            <img src="assets/img/banner/3.png" alt="Banner 3" class="w-full h-auto object-cover">
+                        </div>        
+                    </div>
+
+                    <button id="carousel-prev" class="absolute top-1/2 left-3 -translate-y-1/2 z-10 bg-white/70 hover:bg-white rounded-full p-2 w-10 h-10 flex items-center justify-center">
+                        <svg class_="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button id="carousel-next" class="absolute top-1/2 right-3 -translate-y-1/2 z-10 bg-white/70 hover:bg-white rounded-full p-2 w-10 h-10 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+
+                    <div class="carousel-dots absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex space-x-2">
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder" class="animate-fade-up"></div>
+
+    <script src="/dist/js/main.js"></script>
+    
+</body>
+</html>
